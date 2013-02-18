@@ -244,4 +244,8 @@
     <string name="menu_stats_reset">Reset stats</string>
     <!-- Reset stats confirmation dialog's message -->
     <string name="reset_stats_msg">Battery history stats are going to be reset</string>
+
+    <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Extended reboot</string>
+    <string name="advanced_reboot_summary">Include options in the power menu for rebooting into recovery or bootloader</string>
 </resources>
