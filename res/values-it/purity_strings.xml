@@ -257,4 +257,7 @@
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Riavvio avanzato</string>
     <string name="advanced_reboot_summary">Quando attivo, le opzioni per riavviare in recovery o bootloader  saranno mostrate nel menu di riavvio</string>
+
+    <!-- Bluetooth settings. A checkbox to set if we should accept all the file types regardless of their presence in MIME type whitelist -->
+    <string name="bluetooth_accept_all_files">Accetta tutti i tipi di file</string>
 </resources>
