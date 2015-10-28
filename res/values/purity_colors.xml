@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--  Copyright (C) 2016 Purity ROM Project
+<!--  Copyright (C) 2016 Purity Rom
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -16,8 +16,13 @@
  -->
 
 <resources>
-    <dimen name="color_preference_width">18dip</dimen>
-    <dimen name="color_preference_height">18dip</dimen>
-    <dimen name="alert_dialog_padding_material">20dp</dimen>
-    <dimen name="fab_line_width">2dp</dimen>
+    <!-- Expanded desktop -->
+    <drawable name="expanded_item_bg_activated">#ffEEEEEE</drawable>
+    <drawable name="expanded_item_bg">@android:color/background_light</drawable>
+    <color name="expanded_button_color_normal">#4CAF50</color>
+    <color name="expanded_button_color_close">#F44336</color>
+    <color name="white">#FFF</color>
+    <color name="background_tab_pressed">#1AFFFFFF</color>
+    <color name="material_deep_teal_500">@*android:color/material_deep_teal_500</color>
+    <color name="icon_tint_color">@color/material_deep_teal_500</color>
 </resources>

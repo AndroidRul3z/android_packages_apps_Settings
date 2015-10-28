@@ -4,6 +4,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/purity_settings_title" >
 
+         <!-- Expanded Desktop -->
+         <Preference
+            android:key="expanded_desktop"
+            android:fragment="com.android.settings.purity.ExpandedDesktop"
+            android:layout="@layout/preference_expanded_desktop"
+            android:title="@string/expanded_desktop_category" />
+
          <!-- Quick Settings -->
          <Preference
             android:id="@+id/quick_settings"
