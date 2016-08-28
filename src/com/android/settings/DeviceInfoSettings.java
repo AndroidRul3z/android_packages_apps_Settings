@@ -56,7 +56,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
 
     private static final String KEY_MANUAL = "manual";
     private static final String KEY_REGULATORY_INFO = "regulatory_info";
-    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
@@ -66,7 +65,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
     private static final String KEY_SECURITY_PATCH = "security_patch";
-    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
@@ -151,28 +149,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         if (TextUtils.isEmpty(DeviceInfoUtils.getFeedbackReporterPackage(getActivity()))) {
             getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_FEEDBACK));
         }
-
-        /*
-         * Settings is a generic app and should not contain any device-specific
-         * info.
-         */
-        final Activity act = getActivity();
-
-        // These are contained by the root preference screen
-        PreferenceGroup parentPreference = getPreferenceScreen();
-
-        if (mUm.isAdminUser()) {
-            Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
-                    KEY_SYSTEM_UPDATE_SETTINGS,
-                    Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
-        } else {
-            // Remove for secondary users
-            removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
-        }
-
-        // Read platform settings for additional system update setting
-        removePreferenceIfBoolFalse(KEY_UPDATE_SETTING,
-                R.bool.config_additional_system_update_setting_enable);
 
         // Remove manual entry if none present.
         removePreferenceIfBoolFalse(KEY_MANUAL, R.bool.config_show_manual);
