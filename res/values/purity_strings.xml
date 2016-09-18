@@ -23,4 +23,7 @@
     <!-- Local (desktop) backup password menu title [CHAR LIMIT=25] -->
     <string name="local_backup_password_title">Desktop backup password</string>
 
+     <!-- Battery Light -->
+    <string name="purity_battery_light_settings">Battery charging notifications</string>
+    <string name="purity_leds">LED Lights</string>
 </resources>
