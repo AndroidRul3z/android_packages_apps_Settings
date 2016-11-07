@@ -246,4 +246,7 @@
    <!-- DT2SN -->
     <string name="double_tap_sleep_nav_bar_title">Barra di navigazione</string>
     <string name="double_tap_sleep_nav_bar_summary">Un doppio tap sulla barra di navigazione farà spegnere lo schermo</string>
+
+    <!-- Device Parts -->
+   <string name="omni_device_parts">Impostazioni dispositivo</string>
 </resources>
