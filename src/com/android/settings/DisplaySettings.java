@@ -89,6 +89,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
+    private static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
     private Preference mFontSizePref;
 
@@ -100,6 +101,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mTapToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
+    private SwitchPreference mSwapVolumeButtons;
 
     @Override
     protected int getMetricsCategory() {
@@ -142,6 +144,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         } else {
             removePreference(KEY_LIFT_TO_WAKE);
         }
+
+        // volume rocker reorient
+        mSwapVolumeButtons = (SwitchPreference) findPreference(SWAP_VOLUME_BUTTONS);
+        mSwapVolumeButtons.setOnPreferenceChangeListener(this);
+        int swapVolumeButtons = Settings.System.getInt(getContentResolver(),
+                SWAP_VOLUME_BUTTONS, 0);
+        mSwapVolumeButtons.setChecked(swapVolumeButtons != 0);
 
         if (isDozeAvailable(activity)) {
             mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
@@ -412,6 +421,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mLiftToWakePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), WAKE_GESTURE_ENABLED, value ? 1 : 0);
+        }
+        if (preference == mSwapVolumeButtons) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), SWAP_VOLUME_BUTTONS, value ? 1 : 0);
         }
         if (preference == mDozePreference) {
             boolean value = (Boolean) objValue;
