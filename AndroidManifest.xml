@@ -190,7 +190,7 @@
         <!-- Purity Settings -->
 
         <activity android:name="Settings$PuritySettingsActivity"
-                android:label="@string/advanced_settings_title"
+                android:label="@string/purity_settings_title"
                 android:icon="@drawable/ic_settings_purity"
                 android:taskAffinity="">
             <intent-filter>
@@ -201,9 +201,9 @@
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
-                android:value="com.android.settings.category.advanced" />
+                android:value="com.android.settings.category.purity" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.advanced.ProcessStatsSummary" />
+                android:value="com.android.settings.purity.ProcessStatsSummary" />
         </activity>
  
         <activity android:name="Settings$PuritySettingsActivity"

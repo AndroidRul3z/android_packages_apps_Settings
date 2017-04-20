@@ -34,8 +34,8 @@ import com.android.settings.Utils;
 
 import com.android.internal.logging.MetricsProto.MetricsEvent;
 
-public class QuickSettings  extends SettingsPreferenceFragment
-        implements OnPreferenceChangeListener {
+public class QuickSettings  extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     @Override
     protected int getMetricsCategory() {
@@ -52,7 +52,12 @@ public class QuickSettings  extends SettingsPreferenceFragment
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public void onResume() {
+        super.onResume();
+    }
+
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        return false;
     }
 
 }
