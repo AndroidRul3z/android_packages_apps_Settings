@@ -97,4 +97,8 @@
     <string name="link_volume_option_title">Link ring and notification volume</string>
     <string name="notification_volume_option_title">Notification volume</string>
     <string name="ring_notification_volume_option_title">Ring and notification volume</string>
+
+    <!-- Purity Settings -->
+    <string name="header_category_purity">Purity</string>
+    <string name="purity_settings_title">Purity Settings</string>
 </resources>
