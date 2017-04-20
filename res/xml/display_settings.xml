@@ -110,6 +110,11 @@
                 android:title="@string/swap_volume_buttons_title"
                 android:summary="@string/swap_volume_buttons_summary" />
 
+        <SwitchPreference
+                android:key="volume_button_music_control"
+                android:title="@string/volume_button_music_control_title"
+                android:summary="@string/volume_button_music_control_summary" />
+
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"

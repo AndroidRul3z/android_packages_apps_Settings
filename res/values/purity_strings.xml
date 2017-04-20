@@ -90,6 +90,8 @@
 
     <!-- Volume settings - Volume adjustment sound -->
     <string name="volume_adjust_sounds_title">Volume adjustment sounds</string>
+    <string name="volume_button_music_control_title">Music control</string>
+    <string name="volume_button_music_control_summary">Long press volume buttons to switch tracks while screen off</string>
 
     <!-- Linked / unlinked notification volume -->
     <string name="link_volume_option_title">Link ring and notification volume</string>
