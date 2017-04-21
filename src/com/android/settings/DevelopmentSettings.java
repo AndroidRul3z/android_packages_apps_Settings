@@ -1942,8 +1942,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             writeDebuggerOptions();
         } else if (preference == mVerifyAppsOverUsb) {
             writeVerifyAppsOverUsbOptions();
-        } else if (preference == mOtaDisableAutomaticUpdate) {
-            writeOtaDisableAutomaticUpdateOptions();
         } else if (preference == mStrictMode) {
             writeStrictModeVisualOptions();
         } else if (preference == mPointerLocation) {

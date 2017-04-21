@@ -264,37 +264,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
             sendFeedback();
-        } else if(preference.getKey().equals(KEY_SYSTEM_UPDATE_SETTINGS)) {
-            CarrierConfigManager configManager =
-                    (CarrierConfigManager) getSystemService(Context.CARRIER_CONFIG_SERVICE);
-            PersistableBundle b = configManager.getConfig();
-            if (b != null && b.getBoolean(CarrierConfigManager.KEY_CI_ACTION_ON_SYS_UPDATE_BOOL)) {
-                ciActionOnSysUpdate(b);
-            }
         }
         return super.onPreferenceTreeClick(preference);
-    }
-
-    /**
-     * Trigger client initiated action (send intent) on system update
-     */
-    private void ciActionOnSysUpdate(PersistableBundle b) {
-        String intentStr = b.getString(CarrierConfigManager.
-                KEY_CI_ACTION_ON_SYS_UPDATE_INTENT_STRING);
-        if (!TextUtils.isEmpty(intentStr)) {
-            String extra = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_STRING);
-            String extraVal = b.getString(CarrierConfigManager.
-                    KEY_CI_ACTION_ON_SYS_UPDATE_EXTRA_VAL_STRING);
-
-            Intent intent = new Intent(intentStr);
-            if (!TextUtils.isEmpty(extra)) {
-                intent.putExtra(extra, extraVal);
-            }
-            Log.d(LOG_TAG, "ciActionOnSysUpdate: broadcasting intent " + intentStr +
-                    " with extra " + extra + ", " + extraVal);
-            getActivity().getApplicationContext().sendBroadcast(intent);
-        }
     }
 
     private void removePreferenceIfPropertyMissing(PreferenceGroup preferenceGroup,
@@ -419,15 +390,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 // Dont show feedback option if there is no reporter.
                 if (TextUtils.isEmpty(DeviceInfoUtils.getFeedbackReporterPackage(context))) {
                     keys.add(KEY_DEVICE_FEEDBACK);
-                }
-                final UserManager um = UserManager.get(context);
-                // TODO: system update needs to be fixed for non-owner user b/22760654
-                if (!um.isAdminUser()) {
-                    keys.add(KEY_SYSTEM_UPDATE_SETTINGS);
-                }
-                if (!context.getResources().getBoolean(
-                        R.bool.config_additional_system_update_setting_enable)) {
-                    keys.add(KEY_UPDATE_SETTING);
                 }
                 return keys;
             }
