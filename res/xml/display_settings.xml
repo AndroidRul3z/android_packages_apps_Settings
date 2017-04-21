@@ -100,11 +100,6 @@
                 android:title="@string/screen_zoom_title"
                 settings:keywords="@string/screen_zoom_keywords" />
 
-        <SwitchPreference
-                android:key="volume_button_music_control"
-                android:title="@string/volume_button_music_control_title"
-                android:summary="@string/volume_button_music_control_summary" />
-
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"

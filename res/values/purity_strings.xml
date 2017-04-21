@@ -118,7 +118,7 @@
     <string name="brightness_icon_title">Brightness icon </string>
     <string name="brightness_icon_summary">Show a brightness icon to the left of the brighness slider to adjust auto-brightness</string>
 
-   <!-- Qucik Settings  -->
+   <!-- Quick Settings  -->
     <string name="notification_qstiles_title">Quick Settings</string>
     <string name="quicksettings_title">Quick Settings</string>
 
@@ -144,4 +144,16 @@
     <string name="quick_pulldown_left">Left</string>
     <string name="quick_pulldown_right">Right</string>
     <string name="quick_pulldown_always">Always</string>
+
+   <!-- Button Settings  -->
+    <string name="buttonsettings_title">Button Settings</string>
+    <string name="button_backlight_title">Button backlight</string>
+    <string name="button_timeout_title">Backlight timeout</string>
+    <string name="button_timeout_summary">Disabled on value 0</string>
+    <string name="button_link_brightness">Link to screen</string>
+    <string name="button_link_brightness_summary">Use screen brightness level</string>
+    <string name="button_manual_brightness">Brightness level</string>
+    <string name="unit_sec">sec</string>
+    <string name="button_backlight_enable_title">Enable</string>
+    <string name="button_keys_title">Keys</string>
 </resources>

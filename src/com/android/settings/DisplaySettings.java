@@ -95,7 +95,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
     private static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
-    private static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
     private static final String KEY_ROTATION_CATEGORY = "rotation_category";
     private static final String KEY_ACCELEROMETER = "accelerometer";
     private static final String KEY_ROTATION_ANGLES = "rotation_angles";
@@ -119,8 +118,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
     private SwitchPreference mSwapVolumeButtons;
-    private SwitchPreference mVolumeMusicControl;
-
     private SwitchPreference mAccelerometerPreference;
     private MultiSelectListPreference mRotationAnglesPreference;
 
@@ -180,12 +177,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         int swapVolumeButtons = Settings.System.getInt(getContentResolver(),
                 SWAP_VOLUME_BUTTONS, 0);
         mSwapVolumeButtons.setChecked(swapVolumeButtons != 0);
-
-        mVolumeMusicControl = (SwitchPreference) findPreference(VOLUME_BUTTON_MUSIC_CONTROL);
-        mVolumeMusicControl.setOnPreferenceChangeListener(this);
-        int volumeMusicControl = Settings.System.getInt(getContentResolver(),
-                VOLUME_BUTTON_MUSIC_CONTROL, 0);
-        mVolumeMusicControl.setChecked(volumeMusicControl != 0);
 
         if (isDozeAvailable(activity)) {
             mDozePreference = (SwitchPreference) findPreference(KEY_DOZE);
@@ -524,10 +515,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mSwapVolumeButtons) {
             boolean value = (Boolean) objValue;
             Settings.System.putInt(getContentResolver(), SWAP_VOLUME_BUTTONS, value ? 1 : 0);
-        }
-        if (preference == mVolumeMusicControl) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(getContentResolver(), VOLUME_BUTTON_MUSIC_CONTROL, value ? 1 : 0);
         }
         if (preference == mDozePreference) {
             boolean value = (Boolean) objValue;

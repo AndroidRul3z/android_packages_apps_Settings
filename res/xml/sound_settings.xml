@@ -56,6 +56,11 @@
                 android:key="vibrate_when_ringing"
                 android:title="@string/vibrate_when_ringing_title" />
 
+        <com.android.settings.preference.SystemSettingSwitchPreference
+                android:key="volume_button_music_control"
+                android:title="@string/volume_button_music_control_title"
+                android:summary="@string/volume_button_music_control_summary" 
+                android:defaultValue="false"/>
 
         <!-- Interruptions -->
         <com.android.settingslib.RestrictedPreference
