@@ -58,10 +58,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
     private static final String CATEGORY_KEYS = "button_keys";
     private static final String KEYS_BRIGHTNESS_KEY = "button_brightness";
+    private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
 
     private boolean mButtonBrightnessSupport;
     private PreferenceScreen mButtonBrightness;
     private PreferenceCategory mKeysBackCategory;
+    private SwitchPreference mEnableNavBar;
 
     @Override
     protected int getMetricsCategory() {
@@ -89,8 +91,27 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             prefScreen.removePreference(keysCategory);
             keysCategory.removePreference(mButtonBrightness);
         }
+
+        mEnableNavBar = (SwitchPreference) prefScreen.findPreference(
+                KEYS_SHOW_NAVBAR_KEY);
+
+        boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
+        boolean showNavBar = Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BAR_SHOW, showNavBarDefault ? 1:0) == 1;
+        mEnableNavBar.setChecked(showNavBar);
     }
 
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+      if (preference == mEnableNavBar) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_SHOW, checked ? 1:0);
+            return true;
+         }
+        return super.onPreferenceTreeClick(preference);
+    }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return false;

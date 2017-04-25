@@ -156,6 +156,8 @@
     <string name="unit_sec">sec</string>
     <string name="button_backlight_enable_title">Enable</string>
     <string name="button_keys_title">Keys</string>
+    <string name="navigation_bar_show_title">Show navigation bar</string>
+    <string name="navigation_bar_show_summary">Force enable navigation bar</string>
 
     <!-- Status Bar -->
     <string name="statusbar_settings">Status bar</string>

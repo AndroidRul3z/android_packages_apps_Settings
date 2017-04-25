@@ -154,6 +154,8 @@
     <string name="unit_sec">sec</string>
     <string name="button_backlight_enable_title">Abilita</string>
     <string name="button_keys_title">Tasti</string>
+    <string name="navigation_bar_show_title">Mastra la barra di navigazione</string>
+    <string name="navigation_bar_show_summary">Abilitazione forzata della barra di navigazione</string>
 
     <!-- Status Bar -->
     <string name="statusbar_settings">Barra di stato</string>
