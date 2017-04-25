@@ -22,11 +22,13 @@
             android:title="@string/status_bar_battery_style_category"
             android:fragment="com.android.settings.purity.StatusbarBatteryStyle" />
 
-        <PreferenceScreen
-                android:title="@string/statusbar_tuner" >
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.systemui"
-                    android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
-        </PreferenceScreen>
+         <PreferenceScreen
+            android:key="systemui_tuner_statusbar"
+            android:title="@string/statusbar_items_category">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity" />
+         </PreferenceScreen>
 
 </PreferenceScreen>
