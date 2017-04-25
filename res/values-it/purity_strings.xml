@@ -117,8 +117,8 @@
     <string name="brightness_icon_summary">Mostra un\'icona a sinistra della barra per regolare la luminosità automatica</string>
 
    <!-- Quick Settings  -->
-    <string name="notification_qstiles_title">Impostazioni veloci</string>
-    <string name="quicksettings_title">Impostazioni veloci</string>
+    <string name="notification_qstiles_title">Impostazioni rapide</string>
+    <string name="quicksettings_title">Impostazioni rapide</string>
 
     <!-- Expanded desktop -->
     <string name="expanded_desktop_category">Desktop esteso</string>
@@ -139,12 +139,12 @@
     <string name="quick_pulldown_summary">Il bordo %1$s della barra di stato mostra le Impostazioni rapide</string>
     <string name="quick_pulldown_summary_always">Mostra sempre le impostazioni rapide quando tiri giù la barra di stato</string>
     <string name="quick_pulldown_off">Disattivato</string>
-    <string name="quick_pulldown_left">Sinistra</string>
-    <string name="quick_pulldown_right">Destra</string>
+    <string name="quick_pulldown_left">di Sinistra</string>
+    <string name="quick_pulldown_right">di Destra</string>
     <string name="quick_pulldown_always">Sempre</string>
 
    <!-- Button Settings  -->
-    <string name="buttonsettings_title">Impostazioni pulsanti</string>
+    <string name="buttonsettings_title">Barra di navigazione</string>
     <string name="button_backlight_title">Luminosità pulsanti</string>
     <string name="button_timeout_title">Timeout luminosità</string>
     <string name="button_timeout_summary">Disabilita con il valore 0</string>
@@ -160,10 +160,10 @@
     <!-- Status Bar -->
     <string name="statusbar_settings">Barra di stato</string>
     <string name="statusbar_tuner">Elementi</string>
-    <string name="statusbar_items_category">Elementi della barra di stato</string>
+    <string name="statusbar_items_category">Elementi da visualizzare</string>
 
     <!-- Battery customizations -->
-    <string name="status_bar_battery_style_category">Batteria</string>
+    <string name="status_bar_battery_style_category">Impostazioni Batteria</string>
     <string name="status_bar_battery_style_title">Stile indicatore batteria</string>
     <string name="status_bar_battery_style_icon_portrait">Icona verticale</string>
     <string name="status_bar_battery_style_icon_landscape">Icona orizzontale</string>
