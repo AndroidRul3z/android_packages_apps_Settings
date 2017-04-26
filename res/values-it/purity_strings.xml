@@ -136,11 +136,11 @@
 
     <!-- Quick Pulldown-->
     <string name="quick_pulldown_title">Discesa rapida</string>
-    <string name="quick_pulldown_summary">Il bordo %1$s della barra di stato mostra le Impostazioni rapide</string>
+    <string name="quick_pulldown_summary">Il bordo di %1$s della barra di stato mostra le Impostazioni rapide</string>
     <string name="quick_pulldown_summary_always">Mostra sempre le impostazioni rapide quando tiri giù la barra di stato</string>
     <string name="quick_pulldown_off">Disattivato</string>
-    <string name="quick_pulldown_left">di Sinistra</string>
-    <string name="quick_pulldown_right">di Destra</string>
+    <string name="quick_pulldown_left">Sinistra</string>
+    <string name="quick_pulldown_right">Destra</string>
     <string name="quick_pulldown_always">Sempre</string>
 
    <!-- Button Settings  -->
@@ -178,4 +178,32 @@
     <string name="status_bar_battery_percentage_default">Nascosta</string>
     <string name="status_bar_battery_percentage_text_inside">All\'interno dell\'icona</string>
     <string name="status_bar_battery_percentage_text_next">Accanto all\'icona</string>
+
+    <!-- Statusbar Clock options -->
+    <string name="status_bar_title">Barra di stato</string>
+    <string name="status_bar_clock">Orologio &amp; Data</string>
+    <string name="clock_title_enable">Allineamento</string>
+    <string name="status_bar_show_clock_title">Mostra orologio &amp; data</string>
+    <string name="status_bar_clock_seconds_title">Mostra i secondi</string>
+    <string name="status_bar_am_pm_title">AM/PM</string>
+    <string name="status_bar_am_pm_info">Formato 24 ore abilitato</string>
+    <string name="right_clock">Orologio a destra</string>
+    <string name="center_clock">Orologio al centro</string>
+    <string name="left_clock">Orologio a sinistra</string>
+    <string name="clock_date_display">Data</string>
+    <string name="clock_date_style">Stile data</string>
+    <string name="clock_date_position">Posizione della data</string>
+    <string name="clock_date_format">Formato della data</string>
+    <string name="clock_date_string_edittext_title">Deve essere in formato data. Es: MM/gg/aa</string>
+    <string name="clock_date_string_edittext_summary">Inserisci stringa</string>
+    <string name="clock_date_right">A destra dell\'ora</string>
+    <string name="clock_date_left">A sinistra dell\'ora</string>
+    <string name="clock_am_pm_date_normal">Normali</string>
+    <string name="clock_am_pm_date_small">Piccolo</string>
+    <string name="clock_am_pm_date_none">Nascosto</string>
+    <string name="clock_date_style_lowercase">Minuscolo</string>
+    <string name="clock_date_style_uppercase">Maiuscolo</string>
+    <string name="clock_date_format_custom">Formato Java personalizzato</string>
+    <string name="cancel">Annulla</string>
+    <string name="save">Salva</string>
 </resources>
