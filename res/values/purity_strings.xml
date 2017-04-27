@@ -217,4 +217,8 @@
     <string name="theming_title">Theming</string>
     <string name="oms_app_title">Substratum theme engine</string>
     <string name="oms_app_summary">Start Substratum experience</string>
+
+    <!-- Double tap to sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 </resources>
