@@ -258,7 +258,10 @@ public class ExpandedDesktop extends SettingsPreferenceFragment
 
     @Override
     public void onRebuildComplete(ArrayList<ApplicationsState.AppEntry> entries) {
-        handleAppEntries(entries);
+        if (entries != null) {
+            handleAppEntries(entries);
+            mAllPackagesAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
@@ -319,11 +322,7 @@ public class ExpandedDesktop extends SettingsPreferenceFragment
     }
 
     private void rebuild() {
-        ArrayList<ApplicationsState.AppEntry> newEntries = mSession.rebuild(
-                mActivityFilter, ApplicationsState.ALPHA_COMPARATOR);
-        if (newEntries != null) {
-            handleAppEntries(newEntries);
-        }
+        mSession.rebuild(mActivityFilter, ApplicationsState.ALPHA_COMPARATOR);
     }
 
     private void save() {
