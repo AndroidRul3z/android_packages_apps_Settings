@@ -31,7 +31,6 @@
          <!-- OMS App --> 
          <Preference
             android:key="oms_app"
-            android:title="@string/oms_app_title"
-            android:summary="@string/oms_app_summary"/>
+            android:title="@string/oms_app_title"/>
 
 </PreferenceScreen>

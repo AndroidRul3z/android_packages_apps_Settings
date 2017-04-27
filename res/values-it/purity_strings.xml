@@ -145,12 +145,12 @@
 
    <!-- Button Settings  -->
     <string name="buttonsettings_title">Barra di navigazione</string>
-    <string name="button_backlight_title">Luminosità pulsanti</string>
-    <string name="button_timeout_title">Timeout luminosità</string>
+    <string name="button_backlight_title">Retroilluminazione pulsanti</string>
+    <string name="button_timeout_title">Timeout retrollimuninazione</string>
     <string name="button_timeout_summary">Disabilita con il valore 0</string>
     <string name="button_link_brightness">Abbina allo schermo</string>
     <string name="button_link_brightness_summary">Usa il livello di luminosità dello schermo</string>
-    <string name="button_manual_brightness">Livello luminosità</string>
+    <string name="button_manual_brightness">Livello retroilluminazione</string>
     <string name="unit_sec">sec</string>
     <string name="button_backlight_enable_title">Abilita</string>
     <string name="button_keys_title">Tasti</string>
@@ -206,4 +206,36 @@
     <string name="clock_date_format_custom">Formato Java personalizzato</string>
     <string name="cancel">Annulla</string>
     <string name="save">Salva</string>
+
+    <!-- OMS -->
+    <string name="theming_title">Tema</string>
+    <string name="oms_app_title">Substratum Theme Engine</string>
+
+    <!-- Double tap to sleep -->
+    <string name="double_tap_to_sleep_title">Doppio tocco per bloccare</string>
+    <string name="double_tap_to_sleep_summary">Doppio tocco sulla barra di stato per spegnere lo schermo</string>
+
+    <!-- Display : Rotation -->
+    <string name="display_rotation_title">Angoli di rotazione</string>
+    <string name="display_rotation_disabled">Disabilitata</string>
+    <string name="display_rotation_unit">gradi</string>
+    <string name="display_rotation_category_title">Rotazione</string>
+    <string name="display_rotation_0_title">0 gradi</string>
+    <string name="display_rotation_90_title">90 gradi</string>
+    <string name="display_rotation_180_title">180 gradi</string>
+    <string name="display_rotation_270_title">270 gradi</string>
+
+   <!-- Manage applications: show substratum overlays -->
+   <string name="filter_substratum_apps">Substratum overlays</string>
+   <string name="menu_show_substratum">Mostra overlay</string>
+   <string name="menu_hide_substratum">Nascondi overlay</string>
+
+   <!-- Manage applications: show substratum icon overlays -->
+   <string name="filter_substratum_icons">Icone overlays Substratum</string>
+   <string name="menu_show_substratum_icons">Mostra le icone degli overlay </string>
+   <string name="menu_hide_substratum_icons">Nascondi le icone degli overlay</string>
+
+   <!-- Force authorize substratum packages -->
+   <string name="force_authorize_substratum_packages_title">Autorizzazione forzata di tutte le app tema</string>
+   <string name="force_authorize_substratum_packages_summary">Permetti le app tema provenienti da origini sconosciute</string>
 </resources>
