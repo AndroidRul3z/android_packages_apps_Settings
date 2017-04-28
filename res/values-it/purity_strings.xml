@@ -238,4 +238,7 @@
    <!-- Force authorize substratum packages -->
    <string name="force_authorize_substratum_packages_title">Autorizzazione forzata di tutte le app tema</string>
    <string name="force_authorize_substratum_packages_summary">Permetti le app tema provenienti da origini sconosciute</string>
+
+   <!-- Navigation Bar Height -->
+   <string name="navigation_bar_height">Altezza</string>
 </resources>
