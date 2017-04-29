@@ -242,4 +242,8 @@
 
    <!-- Navigation Bar Height -->
    <string name="navigation_bar_height">Altezza</string>
+
+   <!-- DT2SN -->
+    <string name="double_tap_sleep_nav_bar_title">Barra di navigazione</string>
+    <string name="double_tap_sleep_nav_bar_summary">Un doppio tap sulla barra di navigazione farà spegnere lo schermo</string>
 </resources>
