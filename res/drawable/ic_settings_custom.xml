@@ -19,6 +19,6 @@
     android:width="24dp"
     android:height="24dp">
     <path
-        android:fillColor="@*android:color/material_deep_teal_500"
+        android:fillColor="?android:attr/colorAccent"
         android:pathData="M3 17l0 2 6 0 0 -2 -6 0zM3 5L3 7 13 7 13 5 3 5Zm10 16l0 -2 8 0 0 -2 -8 0 0 -2 -2 0 0 6 2 0zM7 9l0 2 -4 0 0 2 4 0 0 2 2 0 0 -6 -2 0zm14 4l0 -2 -10 0 0 2 10 0zm-6 -4l2 0 0 -2 4 0 0 -2 -4 0 0 -2 -2 0 0 6z" />
 </vector>
