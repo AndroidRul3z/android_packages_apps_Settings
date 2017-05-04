@@ -77,6 +77,7 @@
     <string name="notification_light_use_multiple_leds">LED multipli</string>
     <string name="keywords_lights_brightness_level">diminuisci luminosità led</string>
     <string name="notification_light_automagic">Scegli colori automaticamente</string>
+    <string name="notification_light_automagic_summary">Imposta automaticamente un colore delle notifiche led delle app se non hanno un valore personalizzato</string>
     <!-- Lights settings, LED notification -->
     <string name="led_notification_title">Impostazioni luci</string>
     <string name="led_notification_text">Luce LED abilitata da impostazioni</string>
