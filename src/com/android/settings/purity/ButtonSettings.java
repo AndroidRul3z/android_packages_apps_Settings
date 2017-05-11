@@ -59,14 +59,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String CATEGORY_KEYS = "button_keys";
     private static final String KEYS_BRIGHTNESS_KEY = "button_brightness";
     private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
-    private static final String KEYS_DISABLE_HW_KEY = "hardware_keys_disable";
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
     private boolean mButtonBrightnessSupport;
     private PreferenceScreen mButtonBrightness;
     private PreferenceCategory mKeysBackCategory;
     private SwitchPreference mEnableNavBar;
-    private SwitchPreference mDisabkeHWKeys;
     private ListPreference mNavigationBarHeight;
 
     @Override
@@ -86,14 +84,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
         mButtonBrightnessSupport = res.getBoolean(com.android.internal.R.bool.config_button_brightness_support);
 
-        final int deviceKeys = res.getInteger(
-                com.android.internal.R.integer.config_deviceHardwareKeys);
         final PreferenceCategory keysCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_KEYS);
 
-        if (deviceKeys == 0) {
-            prefScreen.removePreference(keysCategory);
-        } else {
         mButtonBrightness = (PreferenceScreen) prefScreen.findPreference(
             KEYS_BRIGHTNESS_KEY);
         if (!mButtonBrightnessSupport) {
@@ -103,22 +96,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         mEnableNavBar = (SwitchPreference) prefScreen.findPreference(
                 KEYS_SHOW_NAVBAR_KEY);
 
-        mDisabkeHWKeys = (SwitchPreference) prefScreen.findPreference(
-                KEYS_DISABLE_HW_KEY);
-
         boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
         boolean showNavBar = Settings.System.getInt(resolver,
                     Settings.System.NAVIGATION_BAR_SHOW, showNavBarDefault ? 1:0) == 1;
-        mEnableNavBar.setChecked(showNavBar);
-
-        boolean harwareKeysDisable = Settings.System.getInt(resolver,
-                    Settings.System.HARDWARE_KEYS_DISABLE, 0) == 1;
-        mDisabkeHWKeys.setChecked(harwareKeysDisable);
-        }
-
-        boolean showNavBarDefault = DeviceUtils.deviceSupportNavigationBar(getActivity());
-        boolean showNavBar = Settings.System.getInt(resolver,
-                Settings.System.NAVIGATION_BAR_SHOW, showNavBarDefault ? 1:0) == 1;
         mEnableNavBar.setChecked(showNavBar);
 
         mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
@@ -137,18 +117,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getContentResolver(),
                     Settings.System.NAVIGATION_BAR_SHOW, checked ? 1:0);
-            // remove hw button disable if we disable navbar
-            if (!checked) {
-                Settings.System.putInt(getContentResolver(),
-                        Settings.System.HARDWARE_KEYS_DISABLE, 0);
-                mDisabkeHWKeys.setChecked(false);
-            }
-            return true;
-        } else if (preference == mDisabkeHWKeys) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.HARDWARE_KEYS_DISABLE, checked ? 1:0);
-            //updateDisableHWKeyEnablement(checked);
             return true;
          }
         return super.onPreferenceTreeClick(preference);

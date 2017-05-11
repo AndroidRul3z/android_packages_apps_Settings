@@ -157,8 +157,6 @@
     <string name="button_keys_title">Tasti</string>
     <string name="navigation_bar_show_title">Mastra la barra di navigazione</string>
     <string name="navigation_bar_show_summary">Abilitazione forzata della barra di navigazione</string>
-    <string name="hardware_keys_disable_title">Disabilita tasti</string>
-    <string name="hardware_keys_disable_summary">Disabilitazione forzata tasti fisici</string>
     <string name="navigation_bar_title">Pulsanti e disposizione</string>
 
     <!-- Status Bar -->
