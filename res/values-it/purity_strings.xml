@@ -212,8 +212,8 @@
     <string name="oms_app_title">Substratum Theme Engine</string>
 
     <!-- Double tap to sleep -->
-    <string name="double_tap_to_sleep_title">Doppio tocco per bloccare</string>
-    <string name="double_tap_to_sleep_summary">Doppio tocco sulla barra di stato per spegnere lo schermo</string>
+    <string name="double_tap_to_sleep_title">Barra di stato</string>
+    <string name="double_tap_to_sleep_summary">Un doppio tap sulla barra di stato farà spegnere lo schermo</string>
 
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Angoli di rotazione</string>
