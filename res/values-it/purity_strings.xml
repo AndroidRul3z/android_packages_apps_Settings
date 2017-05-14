@@ -253,4 +253,8 @@
     <string name="menu_stats_reset">Ripristina statistiche</string>
     <!-- Reset stats confirmation dialog's message -->
     <string name="reset_stats_msg">Le statistiche della batteria stanno per essere ripristinate</string>
+
+    <!-- Advanced reboot options -->
+    <string name="advanced_reboot_title">Riavvio avanzato</string>
+    <string name="advanced_reboot_summary">Quando attivo, le opzioni per riavviare in recovery o bootloader  saranno mostrate nel menu di riavvio</string>
 </resources>
