@@ -27,6 +27,7 @@
     <string name="batterylight_title">Impostazioni LED batteria</string>
     <string name="battery_light_enable">Abilitata</string>
     <string name="battery_low_pulse_title">Lampeggia se la batteria è scarica</string>
+    <string name="battery_light_only_full_charge_title">Lampeggia se la batteria è carica</string>
     <string name="battery_light_list_title">Colori</string>
     <string name="battery_light_low_color_title">Batteria quasi scarica</string>
     <string name="battery_light_medium_color_title">In carica</string>
