@@ -160,6 +160,8 @@
     <string name="navigation_bar_show_title">Show navigation bar</string>
     <string name="navigation_bar_show_summary">Force enable navigation bar</string>
     <string name="navigation_bar_title">Buttons and layout</string>
+    <string name="button_backlight_on_touch_only_title">Button touch</string>
+    <string name="button_backlight_on_touch_only_summary">Enable backlight with timout only on button touch</string>
 
     <!-- Status Bar -->
     <string name="statusbar_settings">Status bar</string>
@@ -256,4 +258,6 @@
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
+
+
 </resources>
