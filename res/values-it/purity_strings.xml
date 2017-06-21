@@ -265,4 +265,8 @@
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Icona selettore</string>
     <string name="ime_switcher_notify_summary">Mostra l\'icona del selettore metodo di immissione</string>
+
+    <!-- Statusbar Brightness Control -->
+    <string name="status_bar_toggle_brightness">Controllo luminosità</string>
+    <string name="status_bar_toggle_brightness_summary">Modifica la luminosità strisciando sulla barra di stato</string>
 </resources>
