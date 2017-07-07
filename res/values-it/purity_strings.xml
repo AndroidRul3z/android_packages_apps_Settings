@@ -273,4 +273,9 @@
     <!-- Statusbar Brightness Control -->
     <string name="status_bar_toggle_brightness">Controllo luminosità</string>
     <string name="status_bar_toggle_brightness_summary">Modifica la luminosità strisciando sulla barra di stato</string>
+
+    <!-- Language & Input -->
+    <!-- Fullscreen Keyboard -->
+    <string name="disable_fullscreen_keyboard_title">Disabilita tastiera a schermo intero</string>
+    <string name="disable_fullscreen_keyboard_summary">La tastiera in orizzontanel non occuperà lo schermo intero</string>
 </resources>
